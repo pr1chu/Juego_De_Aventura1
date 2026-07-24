@@ -6,7 +6,16 @@ should_we_play = input("¿Quieres jugar? (sí/no): ").lower()
 if (should_we_play == "sí" or should_we_play == "si"):
     print("¡Genial! Vamos a jugar.") 
     print("...")
- 
+    weapon = input("Antes de comenzar, elige un arma para tu aventura. ¿Quieres una espada o un arco? (espada/arco): ").lower()
+    print("...")
+    if weapon == "espada": 
+        print("Has elegido la espada. ¡Preparate para la aventura!") 
+    elif weapon == "arco":
+        print("Has elegido el arco. ¡Preparate para la aventura!")
+    else:
+        print("¡Ups! Opción no válida. Se te asignará una espada por defecto.")
+        weapon = "espada"
+
     direction = input("Estás en un bosque oscuro. ¿Quieres ir a la izquierda o a la derecha? (izquierda/derecha): ").lower()
     if direction == "izquierda":
         print("...")
